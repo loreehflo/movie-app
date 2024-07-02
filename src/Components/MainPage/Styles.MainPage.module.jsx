@@ -1,11 +1,18 @@
 import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    flexDirection: "column",
-  },
   mainBackgroundColor: {
+    backgroundColor: "#0a0d18",
+  },
+  titleContainer: {
+    display: "flex",
+    flexDirection: "row",
+    marginLeft: "125px",
+  },
+  title: {
+    color: "white",
+    fontWeight: "bold",
+    fontSize: "25px",
     backgroundColor: "#0a0d18",
   },
   posterPosition: {
@@ -13,9 +20,6 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center",
-  },
-  carouselWidth: {
-    width: "100%",
   },
 }));
 

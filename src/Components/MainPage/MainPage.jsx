@@ -27,12 +27,15 @@ const MainPage = () => {
   }
 
   return (
-    <div className={`${classes.root} ${classes.carouselWidth}`}>
+    <div className={classes.mainBackgroundColor}>
       <NavBar />
       <CarouselSlider movies={movies} />
-      <div
-        className={`${classes.posterPosition} ${classes.mainBackgroundColor}`}
-      >
+
+      <div className={classes.titleContainer}>
+        <p className={classes.title}>Películas más vistas</p>
+      </div>
+
+      <div className={classes.posterPosition}>
         {movies.map((movie, index) => {
           return <Movie key={`movie-${index}`} {...movie} />;
         })}

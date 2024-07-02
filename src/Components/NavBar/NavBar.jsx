@@ -14,6 +14,7 @@ import {
   ClickAwayListener,
   Popper,
 } from "@material-ui/core";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { Link, useNavigate } from "react-router-dom";
 import useStyles from "./Styles.NavBar.module";
 
@@ -70,6 +71,22 @@ const NavBar = () => {
     navigate("/premium");
   };
 
+  const goToInicio = () => {
+    navigate("/");
+  };
+
+  const goToNovelas = () => {
+    navigate("/novelas");
+  };
+
+  const goToSeries = () => {
+    navigate("/series");
+  };
+
+  const goToKids = () => {
+    navigate("/kids");
+  };
+
   return (
     <div>
       <AppBar className={classes.backgroundNavBar}>
@@ -78,32 +95,27 @@ const NavBar = () => {
             <Typography variant="h4" className={classes.marginRightLogo}>
               VIX
             </Typography>
-            <Typography color="inherit">Peliculas</Typography>
-            <IconButton
+            <Button
               id="resources-button"
-              className={classes.marginRightButton}
-              color="inherit"
+              className={`${classes.marginRightButton} ${classes.textColor}`}
               ref={anchorRef}
               onClick={handleToggle}
             >
-              <Icon>south</Icon>
-            </IconButton>
-
+              Películas
+            </Button>
             <Button
-              className={classes.marginRightText}
-              color="inherit"
+              className={`${classes.marginRightText} ${classes.textColor}`}
               onClick={goToEnVivo}
             >
               En Vivo
             </Button>
             <Button
-              className={classes.marginRightText}
-              color="inherit"
+              className={`${classes.marginRightText} ${classes.textColor}`}
               onClick={goToDeportes}
             >
               Deportes
             </Button>
-            <Button color="inherit" onClick={goToNoticias}>
+            <Button className={classes.textColor} onClick={goToNoticias}>
               Noticias
             </Button>
             <Typography className={classes.title}></Typography>
@@ -125,10 +137,10 @@ const NavBar = () => {
                 </IconButton>
                 <InputBase
                   className={classes.input}
-                  placeholder="Buscar películas, series, novelas"
-                  inputProps={{
-                    "aria-label": "Buscar películas, series, novelas",
-                  }}
+                  placeholder="Buscar películas, series, novelas..."
+                  // inputProps={{
+                  //   "aria-label": "Buscar películas, series, novelas",
+                  // }}
                 />
               </Paper>
             ) : (
@@ -143,7 +155,6 @@ const NavBar = () => {
             {openSearchBar ? (
               <IconButton
                 className={`${classes.marginLeftButton} ${classes.backgroundIcons}`}
-                color="inherit"
               >
                 <Icon>personIcon</Icon>
               </IconButton>
@@ -159,27 +170,27 @@ const NavBar = () => {
         </Container>
       </AppBar>
       <Popper open={open} anchorEl={anchorRef.current}>
-        <Paper>
+        <Paper className={classes.navBarMenu}>
           <ClickAwayListener onClickAway={handleClose}>
             <MenuList
               autoFocusItem={open}
               id="resources-button"
               onKeyDown={handleListKeyDown}
             >
-              <MenuItem onClick={handleClose}>
-                <Link to="/">Inicio</Link>
+              <MenuItem onClick={handleClose} className={classes.menuLinks}>
+                <a onClick={goToInicio}>Inicio</a>
               </MenuItem>
-              <MenuItem onClick={handleClose}>
-                <Link to="/novelas">Novelas</Link>
+              <MenuItem onClick={handleClose} className={classes.menuLinks}>
+                <a onClick={goToNovelas}>Novelas</a>
               </MenuItem>
-              <MenuItem onClick={handleClose}>
-                <Link to="/premium">Premium</Link>
+              <MenuItem onClick={handleClose} className={classes.menuLinks}>
+                <a onClick={goToPruebaPremium}>Premium</a>
               </MenuItem>
-              <MenuItem onClick={handleClose}>
-                <Link to="/series">Series</Link>
+              <MenuItem onClick={handleClose} className={classes.menuLinks}>
+                <a onClick={goToSeries}>Series</a>
               </MenuItem>
-              <MenuItem onClick={handleClose}>
-                <Link to="/kids">Kids</Link>
+              <MenuItem onClick={handleClose} className={classes.menuLinks}>
+                <a onClick={goToKids}>Kids</a>
               </MenuItem>
             </MenuList>
           </ClickAwayListener>
