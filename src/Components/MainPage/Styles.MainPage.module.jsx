@@ -13,13 +13,16 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     fontWeight: "bold",
     fontSize: "25px",
-    backgroundColor: "#0a0d18",
   },
-  posterPosition: {
+  posterContainer: {
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center",
+  },
+  pagination: {
+    backgroundColor: "#0a0d18",
+    padding: "15px",
   },
 }));
 
