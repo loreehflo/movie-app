@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import useStyles from "./Styles.Movie.module";
-import MovieCard from "./MovieCard";
+import MovieCard from "./MovieCard/MovieCard";
 
 const Movie = (props) => {
   const classes = useStyles();

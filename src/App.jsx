@@ -11,7 +11,7 @@ import Novelas from "./Components/Novelas/Novelas";
 import Series from "./Components/Series/Series";
 import Kids from "./Components/Kids/Kids";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import MoviePreview from "./Components/Movie/MoviePreview";
+import MoviePreview from "./Components/Movie/MoviePreview/MoviePreview";
 
 const theme = createTheme();
 
