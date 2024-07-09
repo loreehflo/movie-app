@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
   titleContainer: {
     display: "flex",
     flexDirection: "row",
-    marginLeft: "125px",
+    marginLeft: "6.5%",
   },
   title: {
     color: "white",

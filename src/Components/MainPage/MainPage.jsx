@@ -29,7 +29,6 @@ const MainPage = () => {
 
     const movies = await response.json();
     setMovies(movies.results);
-
     setTotalPages(Math.ceil(movies.total_pages / itemsPerPage));
     // console.log(movies);
   }
@@ -50,7 +49,6 @@ const MainPage = () => {
           return <Movie key={`movie-${index}`} {...movie} />;
         })}
       </div>
-
       <Stack spacing={2}>
         <Pagination
           count={totalPages}

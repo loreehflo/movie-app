@@ -6,7 +6,7 @@ import useStyles from "./Style.CarouselSlider.module";
 const CarouselSlider = (props) => {
   const classes = useStyles();
 
-  //console.log(123, props);
+  //console.log(props);
 
   const responsive = {
     superLargeDesktop: {

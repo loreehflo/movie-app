@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import useStyles from "./Styles.Movie.module";
-import { Icon } from "@material-ui/core";
+import MovieCard from "./MovieCard";
 
 const Movie = (props) => {
   const classes = useStyles();
@@ -8,26 +8,28 @@ const Movie = (props) => {
 
   const url = "https://image.tmdb.org/t/p/w500";
 
-  const titleMovie = props.title;
-  const maxLength = 30;
+  const [onHover, setOnHover] = useState(false);
 
-  const truncateString =
-    titleMovie.length > maxLength
-      ? titleMovie.substring(0, maxLength) + "..."
-      : titleMovie;
+  const handleMouseOverOrOut = () => {
+    setOnHover((prevHover) => !prevHover);
+  };
 
   return (
     <div className={classes.mainBackgroundColor}>
-      <img
-        src={`${url}${props.poster_path}`}
-        alt={props.title}
-        className={classes.poster}
-      />
-      {/* <p className={`${classes.title} ${classes.margin}`}>{truncateString}</p>
-      <div className={classes.information}>
-        <Icon>star</Icon>
-        <p className={classes.margin}>{Math.round(props.vote_average)}</p>
-      </div> */}
+      <div
+        onMouseEnter={handleMouseOverOrOut}
+        onMouseLeave={handleMouseOverOrOut}
+      >
+        {!onHover ? (
+          <img
+            src={`${url}${props.poster_path}`}
+            alt={props.title}
+            className={classes.poster}
+          />
+        ) : (
+          <MovieCard {...props} />
+        )}
+      </div>
     </div>
   );
 };
