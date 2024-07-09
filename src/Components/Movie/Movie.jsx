@@ -4,22 +4,24 @@ import MovieCard from "./MovieCard";
 
 const Movie = (props) => {
   const classes = useStyles();
-  //console.log(props);
+
+  // console.log(props);
 
   const url = "https://image.tmdb.org/t/p/w500";
 
   const [onHover, setOnHover] = useState(false);
 
-  const handleMouseOverOrOut = () => {
-    setOnHover((prevHover) => !prevHover);
+  const handleMouseOver = () => {
+    setOnHover(true);
+  };
+
+  const handleMouseOut = () => {
+    setOnHover(false);
   };
 
   return (
     <div className={classes.mainBackgroundColor}>
-      <div
-        onMouseEnter={handleMouseOverOrOut}
-        onMouseLeave={handleMouseOverOrOut}
-      >
+      <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
         {!onHover ? (
           <img
             src={`${url}${props.poster_path}`}

@@ -8,9 +8,11 @@ import Typography from "@mui/material/Typography";
 import PlayArrow from "@mui/icons-material/PlayArrow";
 import Info from "@mui/icons-material/Info";
 import Star from "@mui/icons-material/Star";
+import { useNavigate } from "react-router-dom";
 import useStyles from "./Styles.MovieCard.module";
 
 const MovieCard = (props) => {
+  // console.log(props);
   const classes = useStyles();
 
   const url = "https://image.tmdb.org/t/p/w500";
@@ -18,6 +20,17 @@ const MovieCard = (props) => {
   const releaseYear = props.release_date.substr(0, 4);
   const voteAverage = Math.floor(props.vote_average);
   let arr = Array.from({ length: voteAverage }, () => 0);
+
+  const navigate = useNavigate();
+  const handleGoToMovie = () => {
+    navigate("/pelicula/resumen", {
+      state: {
+        propsBackdrop: props.backdrop_path,
+        propsTitulo: props.original_title,
+        propsOview: props.overview,
+      },
+    });
+  };
 
   return (
     <Card sx={{ maxWidth: 345 }} className={classes.cardMargin}>
@@ -32,7 +45,7 @@ const MovieCard = (props) => {
           <PlayArrow className={classes.iconBackground} />
         </IconButton>
         <IconButton>
-          <Info className={classes.iconBackground} />
+          <Info className={classes.iconBackground} onClick={handleGoToMovie} />
         </IconButton>
       </CardActions>
       <CardContent className={classes.backgroundCard}>

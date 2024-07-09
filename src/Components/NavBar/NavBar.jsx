@@ -14,8 +14,7 @@ import {
   ClickAwayListener,
   Popper,
 } from "@material-ui/core";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import useStyles from "./Styles.NavBar.module";
 
 const NavBar = () => {

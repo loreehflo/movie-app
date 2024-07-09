@@ -11,6 +11,7 @@ import Novelas from "./Components/Novelas/Novelas";
 import Series from "./Components/Series/Series";
 import Kids from "./Components/Kids/Kids";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MoviePreview from "./Components/Movie/MoviePreview";
 
 const theme = createTheme();
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/novelas" element={<Novelas />} />
           <Route path="/series" element={<Series />} />
           <Route path="/kids" element={<Kids />} />
+          <Route path="/pelicula/resumen" element={<MoviePreview />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
