@@ -21,16 +21,20 @@ const MainPage = () => {
   }, [currentPage]);
 
   async function getMovies() {
-    const apiKey = "abf382d63bc5441ae88f544c3d41d131";
+    try {
+      const apiKey = "abf382d63bc5441ae88f544c3d41d131";
 
-    const response = await fetch(
-      `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&page=${currentPage}`
-    );
+      const response = await fetch(
+        `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&page=${currentPage}`
+      );
 
-    const movies = await response.json();
-    setMovies(movies.results);
-    setTotalPages(Math.ceil(movies.total_pages / itemsPerPage));
-    // console.log(movies);
+      const movies = await response.json();
+      setMovies(movies.results);
+      setTotalPages(Math.ceil(movies.total_pages / itemsPerPage));
+      // console.log(movies);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   const handleChangePage = (event, newPage) => {

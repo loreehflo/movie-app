@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
   titleSize: {
     fontSize: "100px",
+    lineHeight: "90px",
   },
   paragraphSize: {
     fontSize: "25px",

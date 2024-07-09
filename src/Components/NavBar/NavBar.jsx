@@ -4,7 +4,6 @@ import {
   Container,
   Toolbar,
   Typography,
-  Icon,
   IconButton,
   Button,
   MenuList,
@@ -14,6 +13,8 @@ import {
   ClickAwayListener,
   Popper,
 } from "@material-ui/core";
+import Person from "@mui/icons-material/Person";
+import Search from "@mui/icons-material/Search";
 import { useNavigate } from "react-router-dom";
 import useStyles from "./Styles.NavBar.module";
 
@@ -127,19 +128,12 @@ const NavBar = () => {
 
             {openSearchBar ? (
               <Paper component="form">
-                <IconButton
-                  className={classes.iconButton}
-                  aria-label="menu"
-                  onClick={searhBar}
-                >
-                  <Icon>searchIcon</Icon>
+                <IconButton className={classes.iconButton} onClick={searhBar}>
+                  <Search />
                 </IconButton>
                 <InputBase
                   className={classes.input}
                   placeholder="Buscar películas, series, novelas..."
-                  // inputProps={{
-                  //   "aria-label": "Buscar películas, series, novelas",
-                  // }}
                 />
               </Paper>
             ) : (
@@ -148,21 +142,21 @@ const NavBar = () => {
                 color="inherit"
                 onClick={searhBar}
               >
-                <Icon>searchIcon</Icon>
+                <Search />
               </IconButton>
             )}
             {openSearchBar ? (
               <IconButton
                 className={`${classes.marginLeftButton} ${classes.backgroundIcons}`}
               >
-                <Icon>personIcon</Icon>
+                <Person />
               </IconButton>
             ) : (
               <IconButton
                 className={`${classes.marginRightButton} ${classes.backgroundIcons}`}
                 color="inherit"
               >
-                <Icon>personIcon</Icon>
+                <Person />
               </IconButton>
             )}
           </Toolbar>
