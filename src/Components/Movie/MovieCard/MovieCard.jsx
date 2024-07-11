@@ -23,7 +23,7 @@ const MovieCard = (props) => {
 
   const navigate = useNavigate();
   const handleGoToMovie = () => {
-    navigate("/pelicula/resumen", {
+    navigate("/pelicula", {
       state: {
         propsBackdrop: props.backdrop_path,
         propsTitulo: props.original_title,

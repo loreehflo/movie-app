@@ -21,6 +21,9 @@ const useStyles = makeStyles((theme) => ({
   },
   customColorButton: {
     backgroundColor: "#ff5900",
+    "&:hover": {
+      backgroundColor: "#ff702e",
+    },
     color: "#f2f2f2",
     height: "48px",
     width: "160px",

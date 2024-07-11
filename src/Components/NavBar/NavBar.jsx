@@ -87,13 +87,17 @@ const NavBar = () => {
     navigate("/kids");
   };
 
+  const goToIniciarSesion = () => {
+    navigate("/signin");
+  };
+
   return (
     <div>
       <AppBar className={classes.backgroundNavBar}>
         <Container maxWidth="xl">
           <Toolbar>
-            <Typography variant="h4" className={classes.marginRightLogo}>
-              VIX
+            <Typography variant="h5" className={classes.marginRightLogo}>
+              LOREFLiX
             </Typography>
             <Button
               id="resources-button"
@@ -139,7 +143,6 @@ const NavBar = () => {
             ) : (
               <IconButton
                 className={`${classes.marginRightButton} ${classes.backgroundIcons}`}
-                color="inherit"
                 onClick={searhBar}
               >
                 <Search />
@@ -148,13 +151,14 @@ const NavBar = () => {
             {openSearchBar ? (
               <IconButton
                 className={`${classes.marginLeftButton} ${classes.backgroundIcons}`}
+                onClick={goToIniciarSesion}
               >
                 <Person />
               </IconButton>
             ) : (
               <IconButton
                 className={`${classes.marginRightButton} ${classes.backgroundIcons}`}
-                color="inherit"
+                onClick={goToIniciarSesion}
               >
                 <Person />
               </IconButton>
