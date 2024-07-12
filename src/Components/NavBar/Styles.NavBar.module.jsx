@@ -29,9 +29,8 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   customColorButton: {
-    border: "10px solid",
-    borderImage: "linear-gradient(to right, #FE6B8B, #FF8E53) 1",
-    borderWidth: "3px",
+    border: "3px solid",
+    borderImage: "linear-gradient(to right, #ca2173, #ff5900) 1",
     color: "white",
     height: 48,
     padding: "0 30px",
