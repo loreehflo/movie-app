@@ -13,6 +13,7 @@ import Kids from "./Components/Kids/Kids";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MoviePreview from "./Components/Movie/MoviePreview/MoviePreview";
 import IniciarSesion from "./Components/IniciarSesion/IniciarSesion";
+import CrearCuenta from "./Components/CrearCuenta/CrearCuenta";
 
 const theme = createTheme();
 
@@ -32,6 +33,7 @@ function App() {
           <Route path="/kids" element={<Kids />} />
           <Route path="/pelicula" element={<MoviePreview />} />
           <Route path="/signin" element={<IniciarSesion />} />
+          <Route path="/signup" element={<CrearCuenta />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

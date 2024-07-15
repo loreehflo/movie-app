@@ -1,21 +1,20 @@
 import React from "react";
-import useStyles from "./Styles.IniciarSesion.module";
+import useStyles from "./Styles.CrearCuenta.modules";
 import { TextField, Button, IconButton } from "@material-ui/core";
 import ChevronLeft from "@mui/icons-material/ChevronLeft";
 import { Formik } from "formik";
 import { useNavigate } from "react-router-dom";
+import FormGroup from "@mui/material/FormGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
 import * as Yup from "yup";
 
-const IniciarSesion = () => {
+const CrearCuenta = () => {
   const classes = useStyles();
   const navigate = useNavigate();
 
-  const goToHome = () => {
-    navigate("/");
-  };
-
-  const goToSignUp = () => {
-    navigate("/signup");
+  const goToSignIn = () => {
+    navigate("/signin");
   };
 
   const validationSchema = Yup.object().shape({
@@ -30,17 +29,17 @@ const IniciarSesion = () => {
       <IconButton>
         <ChevronLeft
           className={classes.backButton}
-          onClick={goToHome}
+          onClick={goToSignIn}
           fontSize="large"
         />
       </IconButton>
       <div className={classes.viewContainer}>
         <div className={classes.widthContainer}>
+          <h1 className={classes.fontSize}>LOREFLiX</h1>
           <h1 className={`${classes.degraded} ${classes.fontSize}`}>
-            Inicia Sesión
+            Crea tu cuenta
           </h1>
-          <h1 className={classes.fontSize}>con tu cuenta LOREFLiX</h1>
-
+          <h1 className={classes.fontSize}>y empieza a disfrutar</h1>
           <Formik
             initialValues={{ email: "", password: "" }}
             validationSchema={validationSchema}
@@ -94,36 +93,30 @@ const IniciarSesion = () => {
                     <div className={classes.errorStyle}>{errors.password}</div>
                   )}
                   <br />
+                  <FormGroup>
+                    <FormControlLabel
+                      control={<Checkbox defaultChecked />}
+                      labelPlacement="end"
+                      label="Estoy de acuerdo con los Términos y Condiciones"
+                    />
+                  </FormGroup>
+
+                  <br />
                   <Button
                     type="submit"
                     disabled={isSubmitting}
                     className={classes.signInButton}
                   >
-                    Iniciar Sesión
-                  </Button>
-                  <br />
-                  <Button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className={classes.signUpButton}
-                    onClick={goToSignUp}
-                  >
-                    ¿No tienes una cuenta? Crea una...
+                    Comenzar
                   </Button>
                 </div>
               </form>
             )}
           </Formik>
-          <br />
-          <div className={classes.passwordLink}>
-            <a href="#" className={classes.colorLink}>
-              ¿Olvidaste tu contraseña?
-            </a>
-          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default IniciarSesion;
+export default CrearCuenta;
