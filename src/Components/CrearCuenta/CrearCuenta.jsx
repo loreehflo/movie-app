@@ -14,7 +14,7 @@ const CrearCuenta = () => {
   const navigate = useNavigate();
 
   const goToSignIn = () => {
-    navigate("/signin");
+    navigate("/sign-in");
   };
 
   const validationSchema = Yup.object().shape({
@@ -35,11 +35,11 @@ const CrearCuenta = () => {
       </IconButton>
       <div className={classes.viewContainer}>
         <div className={classes.widthContainer}>
-          <h1 className={classes.fontSize}>LOREFLiX</h1>
-          <h1 className={`${classes.degraded} ${classes.fontSize}`}>
+          <h1 className={classes.signUpHeader}>LOREFLiX</h1>
+          <h1 className={`${classes.degraded} ${classes.signUpHeader}`}>
             Crea tu cuenta
           </h1>
-          <h1 className={classes.fontSize}>y empieza a disfrutar</h1>
+          <h1 className={classes.signUpHeader}>y empieza a disfrutar</h1>
           <Formik
             initialValues={{ email: "", password: "" }}
             validationSchema={validationSchema}
@@ -66,7 +66,7 @@ const CrearCuenta = () => {
                     onBlur={handleBlur}
                     value={values.email}
                     variant="outlined"
-                    className={classes.signInInputs}
+                    className={classes.signUpInputs}
                     placeholder="ejemplo@email.com"
                     InputProps={{
                       style: { color: "#f2f2f2", border: "1px solid #67696f" },
@@ -83,7 +83,7 @@ const CrearCuenta = () => {
                     onBlur={handleBlur}
                     value={values.password}
                     variant="outlined"
-                    className={classes.signInInputs}
+                    className={classes.signUpInputs}
                     placeholder="Contraseña"
                     InputProps={{
                       style: { color: "#f2f2f2", border: "1px solid #67696f" },
@@ -105,7 +105,7 @@ const CrearCuenta = () => {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className={classes.signInButton}
+                    className={classes.signUpButton}
                   >
                     Comenzar
                   </Button>

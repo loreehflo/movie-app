@@ -15,11 +15,11 @@ const Premium = () => {
   };
 
   const goToSignIn = () => {
-    navigate("/signin");
+    navigate("/sign-in");
   };
 
   const goToSignUp = () => {
-    navigate("/signup");
+    navigate("/sign-up");
   };
 
   return (
@@ -33,19 +33,19 @@ const Premium = () => {
       </IconButton>
       <div className={classes.viewContainer}>
         <div className={classes.widthContainer}>
-          <h1 className={`${classes.degraded} ${classes.fontSize}`}>
+          <h1 className={`${classes.degraded} ${classes.premiumHeader}`}>
             Con Premium
           </h1>
-          <h1 className={classes.fontSize}>tienes más</h1>
-          <div className={classes.iconcontainer}>
+          <h1 className={classes.premiumHeader}>tienes más</h1>
+          <div className={classes.iconContainer}>
             <Done className={classes.doneIcon} />
             <p>Series y películas premium</p>
           </div>
-          <div className={classes.iconcontainer}>
+          <div className={classes.iconContainer}>
             <Done className={classes.doneIcon} />
             <p>Liga MX y más</p>
           </div>
-          <div className={classes.iconcontainer}>
+          <div className={classes.iconContainer}>
             <Done className={classes.doneIcon} />
             <p>Cancela cuando quieras</p>
           </div>
@@ -66,7 +66,7 @@ const Premium = () => {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className={classes.signInButton}
+                    className={classes.premiumButton}
                     onClick={goToSignIn}
                   >
                     Prueba Premium
@@ -75,7 +75,7 @@ const Premium = () => {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className={classes.signUpButton}
+                    className={classes.freeButton}
                     onClick={goToSignUp}
                   >
                     O crea una prueba gratis

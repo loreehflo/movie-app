@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-evenly",
     alignItems: "center",
   },
-  fontSize: {
+  resetHeader: {
     fontSize: "60px",
     marginBottom: "-50px",
   },
@@ -32,13 +32,13 @@ const useStyles = makeStyles((theme) => ({
     width: "400px",
     marginTop: "50px",
   },
-  signInInputs: {
+  resetInput: {
     borderRadius: "5px",
   },
   errorStyle: {
     color: "#ff5900",
   },
-  signInButton: {
+  resetButton: {
     backgroundColor: "#ff5900",
     color: "#f2f2f2",
     "&:hover": {

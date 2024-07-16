@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   widthContainer: {
     width: "25%",
   },
-  fontSize: {
+  premiumHeader: {
     fontSize: "40px",
   },
   degraded: {
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     color: "transparent",
     marginBottom: "-40px",
   },
-  iconcontainer: {
+  iconContainer: {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   errorStyle: {
     color: "#ff5900",
   },
-  signInButton: {
+  premiumButton: {
     backgroundColor: "#ff5900",
     color: "#f2f2f2",
     "&:hover": {
@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "15px",
     marginTop: "20px",
   },
-  signUpButton: {
+  freeButton: {
     backgroundColor: "#383b44",
     color: "#f2f2f2",
     "&:hover": {

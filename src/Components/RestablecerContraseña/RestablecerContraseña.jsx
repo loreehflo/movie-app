@@ -10,8 +10,8 @@ const RestablecerContraseña = () => {
   const classes = useStyles();
   const navigate = useNavigate();
 
-  const goToHome = () => {
-    navigate("/");
+  const goToSignIn = () => {
+    navigate("/sign-in");
   };
 
   const validationSchema = Yup.object().shape({
@@ -25,17 +25,17 @@ const RestablecerContraseña = () => {
       <IconButton>
         <ChevronLeft
           className={classes.backButton}
-          onClick={goToHome}
+          onClick={goToSignIn}
           fontSize="large"
         />
       </IconButton>
       <div className={classes.viewContainer}>
         <div>
-          <h1 className={`${classes.degraded} ${classes.fontSize}`}>
+          <h1 className={`${classes.degraded} ${classes.resetHeader}`}>
             Ingresa tu correo
           </h1>
-          <h1 className={classes.fontSize}>para restablecer</h1>
-          <h1 className={classes.fontSize}>tu contraseña</h1>
+          <h1 className={classes.resetHeader}>para restablecer</h1>
+          <h1 className={classes.resetHeader}>tu contraseña</h1>
         </div>
         <Formik
           initialValues={{ email: "" }}
@@ -63,7 +63,7 @@ const RestablecerContraseña = () => {
                   onBlur={handleBlur}
                   value={values.email}
                   variant="outlined"
-                  className={classes.signInInputs}
+                  className={classes.resetInput}
                   placeholder="ejemplo@email.com"
                   InputProps={{
                     style: { color: "#f2f2f2", border: "1px solid #67696f" },
@@ -75,7 +75,7 @@ const RestablecerContraseña = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className={classes.signInButton}
+                  className={classes.resetButton}
                 >
                   Enviar
                 </Button>

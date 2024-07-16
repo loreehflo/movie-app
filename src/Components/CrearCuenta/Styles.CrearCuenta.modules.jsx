@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   widthContainer: {
     width: "25%",
   },
-  fontSize: {
+  signUpHeader: {
     fontSize: "40px",
   },
   degraded: {
@@ -32,16 +32,13 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
   },
-  signInInputs: {
+  signUpInputs: {
     borderRadius: "5px",
   },
   errorStyle: {
     color: "#ff5900",
   },
-  styleConditions: {
-    fontSize: "10px",
-  },
-  signInButton: {
+  signUpButton: {
     backgroundColor: "#ff5900",
     color: "#f2f2f2",
     "&:hover": {

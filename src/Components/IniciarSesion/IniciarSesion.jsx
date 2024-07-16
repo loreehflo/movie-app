@@ -15,7 +15,7 @@ const IniciarSesion = () => {
   };
 
   const goToSignUp = () => {
-    navigate("/signup");
+    navigate("/sign-up");
   };
 
   const goToResetPassword = () => {
@@ -40,10 +40,10 @@ const IniciarSesion = () => {
       </IconButton>
       <div className={classes.viewContainer}>
         <div className={classes.widthContainer}>
-          <h1 className={`${classes.degraded} ${classes.fontSize}`}>
+          <h1 className={`${classes.degraded} ${classes.signInHeader}`}>
             Inicia Sesión
           </h1>
-          <h1 className={classes.fontSize}>con tu cuenta LOREFLiX</h1>
+          <h1 className={classes.signInHeader}>con tu cuenta LOREFLiX</h1>
 
           <Formik
             initialValues={{ email: "", password: "" }}

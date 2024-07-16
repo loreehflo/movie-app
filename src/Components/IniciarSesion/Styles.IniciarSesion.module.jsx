@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   widthContainer: {
     width: "25%",
   },
-  fontSize: {
+  signInHeader: {
     fontSize: "40px",
   },
   degraded: {

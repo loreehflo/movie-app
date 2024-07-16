@@ -88,7 +88,7 @@ const NavBar = () => {
   };
 
   const goToIniciarSesion = () => {
-    navigate("/signin");
+    navigate("/sign-in");
   };
 
   return (

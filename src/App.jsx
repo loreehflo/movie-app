@@ -33,8 +33,8 @@ function App() {
           <Route path="/series" element={<Series />} />
           <Route path="/kids" element={<Kids />} />
           <Route path="/pelicula" element={<MoviePreview />} />
-          <Route path="/signin" element={<IniciarSesion />} />
-          <Route path="/signup" element={<CrearCuenta />} />
+          <Route path="/sign-in" element={<IniciarSesion />} />
+          <Route path="/sign-up" element={<CrearCuenta />} />
           <Route path="/reset-password" element={<RestablecerContraseña />} />
         </Routes>
       </BrowserRouter>
