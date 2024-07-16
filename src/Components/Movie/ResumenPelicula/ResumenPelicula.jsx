@@ -7,8 +7,8 @@ import useStyles from "./Styles.ResumenPelicula.module";
 const ResumenPelicula = () => {
   const classes = useStyles();
   const location = useLocation();
-  const { propsBackdrop, propsTitulo, propsOview } = location.state;
-  // console.log(propsOview);
+  const { propsBackdrop, propsTitulo, propsOverView } = location.state;
+  // console.log(propsOverView);
 
   const url = "https://image.tmdb.org/t/p/w500";
 
@@ -24,7 +24,7 @@ const ResumenPelicula = () => {
     >
       <div className={classes.movieOverviewContainer}>
         <h1 className={classes.titleSize}>{propsTitulo}</h1>
-        <p className={classes.paragraphSize}>{propsOview}</p>
+        <p className={classes.paragraphSize}>{propsOverView}</p>
         <Button className={classes.customColorButton}>
           <PlayArrow />
           Ver Ahora

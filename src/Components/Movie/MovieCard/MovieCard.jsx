@@ -22,12 +22,22 @@ const MovieCard = (props) => {
   let arr = Array.from({ length: voteAverage }, () => 0);
 
   const navigate = useNavigate();
-  const handleGoToMovie = () => {
+
+  const goToPlayMovie = () => {
+    navigate("/ver-pelicula", {
+      state: {
+        propsBackdrop: props.backdrop_path,
+        propsTitulo: props.original_title,
+      },
+    });
+  };
+
+  const goToMoviePreview = () => {
     navigate("/resumen-pelicula", {
       state: {
         propsBackdrop: props.backdrop_path,
         propsTitulo: props.original_title,
-        propsOview: props.overview,
+        propsOverView: props.overview,
       },
     });
   };
@@ -42,10 +52,13 @@ const MovieCard = (props) => {
       />
       <CardActions disableSpacing className={classes.backgroundCard}>
         <IconButton>
-          <PlayArrow className={classes.iconBackground} />
+          <PlayArrow
+            className={classes.iconBackground}
+            onClick={goToPlayMovie}
+          />
         </IconButton>
         <IconButton>
-          <Info className={classes.iconBackground} onClick={handleGoToMovie} />
+          <Info className={classes.iconBackground} onClick={goToMoviePreview} />
         </IconButton>
       </CardActions>
       <CardContent className={classes.backgroundCard}>

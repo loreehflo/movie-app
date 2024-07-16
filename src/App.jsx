@@ -11,6 +11,7 @@ import Series from "./Components/Series/Series";
 import Kids from "./Components/Kids/Kids";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ResumenPelicula from "./Components/Movie/ResumenPelicula/ResumenPelicula";
+import VerPelicula from "./Components/Movie/VerPelicula/VerPelicula";
 import IniciarSesion from "./Components/IniciarSesion/IniciarSesion";
 import CrearCuenta from "./Components/CrearCuenta/CrearCuenta";
 import RestablecerContraseña from "./Components/RestablecerContraseña/RestablecerContraseña";
@@ -31,6 +32,7 @@ function App() {
           <Route path="/series" element={<Series />} />
           <Route path="/kids" element={<Kids />} />
           <Route path="/resumen-pelicula" element={<ResumenPelicula />} />
+          <Route path="/ver-pelicula" element={<VerPelicula />} />
           <Route path="/iniciar-sesion" element={<IniciarSesion />} />
           <Route path="/crear-cuenta" element={<CrearCuenta />} />
           <Route
