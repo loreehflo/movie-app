@@ -6,7 +6,6 @@ import EnVivo from "./Components/EnVivo/EnVivo";
 import Deportes from "./Components/Deportes/Deportes";
 import Noticias from "./Components/Noticias/Noticias";
 import Premium from "./Components/Premium/Premium";
-import Registro from "./Components/Registro/Registro";
 import Novelas from "./Components/Novelas/Novelas";
 import Series from "./Components/Series/Series";
 import Kids from "./Components/Kids/Kids";
@@ -28,7 +27,6 @@ function App() {
           <Route path="/deportes" element={<Deportes />} />
           <Route path="/noticias" element={<Noticias />} />
           <Route path="/premium" element={<Premium />} />
-          <Route path="/registro" element={<Registro />} />
           <Route path="/novelas" element={<Novelas />} />
           <Route path="/series" element={<Series />} />
           <Route path="/kids" element={<Kids />} />

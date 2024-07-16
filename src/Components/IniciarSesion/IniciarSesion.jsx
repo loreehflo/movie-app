@@ -44,7 +44,6 @@ const IniciarSesion = () => {
             Inicia Sesión
           </h1>
           <h1 className={classes.signInHeader}>con tu cuenta LOREFLiX</h1>
-
           <Formik
             initialValues={{ email: "", password: "" }}
             validationSchema={validationSchema}

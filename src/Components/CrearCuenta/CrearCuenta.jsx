@@ -100,7 +100,6 @@ const CrearCuenta = () => {
                       label="Estoy de acuerdo con los Términos y Condiciones"
                     />
                   </FormGroup>
-
                   <br />
                   <Button
                     type="submit"

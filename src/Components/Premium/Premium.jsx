@@ -36,14 +36,18 @@ const Premium = () => {
           <h1 className={`${classes.degraded} ${classes.premiumHeader}`}>
             Con Premium
           </h1>
-          <h1 className={classes.premiumHeader}>tienes más</h1>
+          <h1 className={classes.premiumHeader}>tienes más...</h1>
           <div className={classes.iconContainer}>
             <Done className={classes.doneIcon} />
-            <p>Series y películas premium</p>
+            <p>Series y Películas Premium</p>
           </div>
           <div className={classes.iconContainer}>
             <Done className={classes.doneIcon} />
             <p>Liga MX y más</p>
+          </div>
+          <div className={classes.iconContainer}>
+            <Done className={classes.doneIcon} />
+            <p>Sin Anuncios</p>
           </div>
           <div className={classes.iconContainer}>
             <Done className={classes.doneIcon} />
@@ -67,18 +71,18 @@ const Premium = () => {
                     type="submit"
                     disabled={isSubmitting}
                     className={classes.premiumButton}
-                    onClick={goToSignIn}
+                    onClick={goToSignUp}
                   >
-                    Prueba Premium
+                    Empieza ya
                   </Button>
                   <br />
                   <Button
                     type="submit"
                     disabled={isSubmitting}
                     className={classes.freeButton}
-                    onClick={goToSignUp}
+                    onClick={goToSignIn}
                   >
-                    O crea una prueba gratis
+                    Ya tengo plan premium, Iniciar Sesion...
                   </Button>
                 </div>
               </form>
