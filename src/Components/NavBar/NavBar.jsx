@@ -181,9 +181,6 @@ const NavBar = () => {
                 <a onClick={goToNovelas}>Novelas</a>
               </MenuItem>
               <MenuItem onClick={handleClose} className={classes.menuLinks}>
-                <a onClick={goToPruebaPremium}>Premium</a>
-              </MenuItem>
-              <MenuItem onClick={handleClose} className={classes.menuLinks}>
                 <a onClick={goToSeries}>Series</a>
               </MenuItem>
               <MenuItem onClick={handleClose} className={classes.menuLinks}>

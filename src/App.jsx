@@ -14,6 +14,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MoviePreview from "./Components/Movie/MoviePreview/MoviePreview";
 import IniciarSesion from "./Components/IniciarSesion/IniciarSesion";
 import CrearCuenta from "./Components/CrearCuenta/CrearCuenta";
+import RestablecerContraseña from "./Components/RestablecerContraseña/RestablecerContraseña";
 
 const theme = createTheme();
 
@@ -34,6 +35,7 @@ function App() {
           <Route path="/pelicula" element={<MoviePreview />} />
           <Route path="/signin" element={<IniciarSesion />} />
           <Route path="/signup" element={<CrearCuenta />} />
+          <Route path="/reset-password" element={<RestablecerContraseña />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

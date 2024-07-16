@@ -18,6 +18,10 @@ const IniciarSesion = () => {
     navigate("/signup");
   };
 
+  const goToResetPassword = () => {
+    navigate("/reset-password");
+  };
+
   const validationSchema = Yup.object().shape({
     email: Yup.string()
       .email("Ingrese un email válido")
@@ -116,7 +120,11 @@ const IniciarSesion = () => {
           </Formik>
           <br />
           <div className={classes.passwordLink}>
-            <a href="#" className={classes.colorLink}>
+            <a
+              href="#"
+              className={classes.colorLink}
+              onClick={goToResetPassword}
+            >
               ¿Olvidaste tu contraseña?
             </a>
           </div>
