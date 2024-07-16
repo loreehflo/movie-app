@@ -56,7 +56,7 @@ const NavBar = () => {
   };
 
   const goToEnVivo = () => {
-    navigate("/envivo");
+    navigate("/en-vivo");
   };
 
   const goToDeportes = () => {
@@ -88,7 +88,7 @@ const NavBar = () => {
   };
 
   const goToIniciarSesion = () => {
-    navigate("/sign-in");
+    navigate("/iniciar-sesion");
   };
 
   return (

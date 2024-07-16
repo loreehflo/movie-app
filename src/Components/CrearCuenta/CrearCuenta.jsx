@@ -14,7 +14,7 @@ const CrearCuenta = () => {
   const navigate = useNavigate();
 
   const goToSignIn = () => {
-    navigate("/sign-in");
+    navigate("/iniciar-sesion");
   };
 
   const validationSchema = Yup.object().shape({

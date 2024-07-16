@@ -15,11 +15,11 @@ const Premium = () => {
   };
 
   const goToSignIn = () => {
-    navigate("/sign-in");
+    navigate("/iniciar-sesion");
   };
 
   const goToSignUp = () => {
-    navigate("/sign-up");
+    navigate("/crear-cuenta");
   };
 
   return (

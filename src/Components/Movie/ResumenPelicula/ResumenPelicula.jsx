@@ -2,9 +2,9 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import PlayArrow from "@mui/icons-material/PlayArrow";
 import { Button } from "@material-ui/core";
-import useStyles from "./Styles.MoviePreview.module";
+import useStyles from "./Styles.ResumenPelicula.module";
 
-const MoviePreview = () => {
+const ResumenPelicula = () => {
   const classes = useStyles();
   const location = useLocation();
   const { propsBackdrop, propsTitulo, propsOview } = location.state;
@@ -34,4 +34,4 @@ const MoviePreview = () => {
   );
 };
 
-export default MoviePreview;
+export default ResumenPelicula;

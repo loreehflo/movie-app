@@ -11,7 +11,7 @@ const RestablecerContraseña = () => {
   const navigate = useNavigate();
 
   const goToSignIn = () => {
-    navigate("/sign-in");
+    navigate("/iniciar-sesion");
   };
 
   const validationSchema = Yup.object().shape({

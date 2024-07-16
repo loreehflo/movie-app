@@ -15,11 +15,11 @@ const IniciarSesion = () => {
   };
 
   const goToSignUp = () => {
-    navigate("/sign-up");
+    navigate("/crear-cuenta");
   };
 
   const goToResetPassword = () => {
-    navigate("/reset-password");
+    navigate("/restablecer-contraseña");
   };
 
   const validationSchema = Yup.object().shape({
