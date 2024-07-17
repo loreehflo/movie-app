@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import PlayArrow from "@mui/icons-material/PlayArrow";
 import { Button } from "@material-ui/core";
 import useStyles from "./Styles.ResumenPelicula.module";
@@ -7,10 +7,20 @@ import useStyles from "./Styles.ResumenPelicula.module";
 const ResumenPelicula = () => {
   const classes = useStyles();
   const location = useLocation();
+  const navigate = useNavigate();
   const { propsBackdrop, propsTitulo, propsOverView } = location.state;
   // console.log(propsOverView);
 
   const url = "https://image.tmdb.org/t/p/w500";
+
+  const goToSeeMovie = () => {
+    navigate("/ver-pelicula", {
+      state: {
+        propsBackdrop: propsBackdrop,
+        propsTitulo: propsTitulo,
+      },
+    });
+  };
 
   return (
     <div
@@ -25,7 +35,7 @@ const ResumenPelicula = () => {
       <div className={classes.movieOverviewContainer}>
         <h1 className={classes.titleSize}>{propsTitulo}</h1>
         <p className={classes.paragraphSize}>{propsOverView}</p>
-        <Button className={classes.customColorButton}>
+        <Button className={classes.customColorButton} onClick={goToSeeMovie}>
           <PlayArrow />
           Ver Ahora
         </Button>

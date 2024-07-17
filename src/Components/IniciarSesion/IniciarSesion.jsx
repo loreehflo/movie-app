@@ -31,13 +31,15 @@ const IniciarSesion = () => {
 
   return (
     <div className={classes.mainContaner}>
-      <IconButton>
-        <ChevronLeft
-          className={classes.backButton}
-          onClick={goToHome}
-          fontSize="large"
-        />
-      </IconButton>
+      <div className={classes.buttonContainer}>
+        <IconButton>
+          <ChevronLeft
+            className={classes.backButton}
+            onClick={goToHome}
+            fontSize="large"
+          />
+        </IconButton>
+      </div>
       <div className={classes.viewContainer}>
         <div className={classes.widthContainer}>
           <h1 className={`${classes.degraded} ${classes.signInHeader}`}>

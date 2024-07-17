@@ -22,13 +22,15 @@ const RestablecerContraseña = () => {
 
   return (
     <div className={classes.mainContaner}>
-      <IconButton>
-        <ChevronLeft
-          className={classes.backButton}
-          onClick={goToSignIn}
-          fontSize="large"
-        />
-      </IconButton>
+      <div className={classes.buttonContainer}>
+        <IconButton>
+          <ChevronLeft
+            className={classes.backButton}
+            onClick={goToSignIn}
+            fontSize="large"
+          />
+        </IconButton>
+      </div>
       <div className={classes.viewContainer}>
         <div>
           <h1 className={`${classes.degraded} ${classes.resetHeader}`}>

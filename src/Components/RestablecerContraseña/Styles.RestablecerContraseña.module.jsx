@@ -7,9 +7,14 @@ const useStyles = makeStyles((theme) => ({
     height: "100vh",
     width: "100wh",
   },
+  buttonContainer: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    padding: "50px",
+  },
   backButton: {
     color: "#f2f2f2",
-    padding: "50px",
   },
   viewContainer: {
     display: "flex",

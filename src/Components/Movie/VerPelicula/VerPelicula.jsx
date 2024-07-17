@@ -1,7 +1,7 @@
 import React from "react";
 import { IconButton } from "@material-ui/core";
 import ChevronLeft from "@mui/icons-material/ChevronLeft";
-import PlayCircle from "@mui/icons-material/PlayCircle";
+import PlayArrow from "@mui/icons-material/PlayArrow";
 import { useLocation, useNavigate } from "react-router-dom";
 import useStyles from "./Styles.VerPelicula.module";
 
@@ -39,8 +39,8 @@ const VerPelicula = () => {
         <h1>{propsTitulo}</h1>
       </div>
       <div className={classes.playContainer}>
-        <IconButton>
-          <PlayCircle className={classes.playIcon} fontSize="large" />
+        <IconButton className={classes.playButton}>
+          <PlayArrow className={classes.playIcon} fontSize="large" />
         </IconButton>
       </div>
     </div>

@@ -26,13 +26,15 @@ const CrearCuenta = () => {
 
   return (
     <div className={classes.mainContaner}>
-      <IconButton>
-        <ChevronLeft
-          className={classes.backButton}
-          onClick={goToSignIn}
-          fontSize="large"
-        />
-      </IconButton>
+      <div className={classes.buttonContainer}>
+        <IconButton>
+          <ChevronLeft
+            className={classes.backButton}
+            onClick={goToSignIn}
+            fontSize="large"
+          />
+        </IconButton>
+      </div>
       <div className={classes.viewContainer}>
         <div className={classes.widthContainer}>
           <h1 className={classes.signUpHeader}>LOREFLiX</h1>

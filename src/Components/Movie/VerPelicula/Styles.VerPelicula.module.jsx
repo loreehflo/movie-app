@@ -21,6 +21,9 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     marginTop: "200px",
   },
+  playButton: {
+    border: "3px solid #f2f2f2",
+  },
   playIcon: {
     color: "#f2f2f2",
   },
