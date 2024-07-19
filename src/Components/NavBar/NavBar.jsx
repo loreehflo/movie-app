@@ -18,7 +18,7 @@ import Search from "@mui/icons-material/Search";
 import { useNavigate } from "react-router-dom";
 import useStyles from "./Styles.NavBar.module";
 
-const NavBar = () => {
+const NavBar = ({ onInputChange }) => {
   const classes = useStyles();
   const navigate = useNavigate();
 
@@ -47,12 +47,21 @@ const NavBar = () => {
     }
   }
 
-  //show searchBar
+  // show searchBar
   const [openSearchBar, setOpenSearchBar] = useState(false);
 
   const searhBar = () => {
     setOpenSearchBar((prevopenSearchBar) => !prevopenSearchBar);
-    //console.log(openSearchBar);
+    // console.log(openSearchBar);
+  };
+
+  // inputHandler
+  const [inputValue, setInputValue] = useState("");
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+    // console.log(inputValue);
+    onInputChange(inputValue);
   };
 
   const goToEnVivo = () => {
@@ -138,6 +147,8 @@ const NavBar = () => {
                 <InputBase
                   className={classes.input}
                   placeholder="Buscar películas, series, novelas..."
+                  value={inputValue}
+                  onChange={handleInputChange}
                 />
               </Paper>
             ) : (

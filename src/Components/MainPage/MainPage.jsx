@@ -9,12 +9,16 @@ import Stack from "@mui/material/Stack";
 const MainPage = () => {
   const classes = useStyles();
 
-  const [movies, setMovies] = useState([]);
+  const [allMovies, setAllMovies] = useState([]);
 
   // Pagination
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
   const itemsPerPage = 10;
+
+  // Filtrar peliculas
+  const [parentInputValue, setParentInputValue] = useState("");
+  const [filteredMovies, setFilteredMovies] = useState([]);
 
   useEffect(() => {
     getMovies();
@@ -29,9 +33,11 @@ const MainPage = () => {
       );
 
       const movies = await response.json();
-      setMovies(movies.results);
+
+      setAllMovies(movies.results);
+
       setTotalPages(Math.ceil(movies.total_pages / itemsPerPage));
-      // console.log(movies);
+      // console.log(allMovies)
     } catch (error) {
       console.log(error);
     }
@@ -41,17 +47,33 @@ const MainPage = () => {
     setCurrentPage(newPage);
   };
 
+  const handleInputValueChange = (value) => {
+    setParentInputValue(value);
+  };
+
+  useEffect(() => {
+    // Filtrar películas basadas en el input de búsqueda
+    if (parentInputValue === "") {
+      setFilteredMovies(allMovies);
+    } else {
+      const filtered = allMovies.filter((movie) =>
+        movie.title.toLowerCase().includes(parentInputValue.toLowerCase())
+      );
+      setFilteredMovies(filtered);
+    }
+  }, [allMovies, parentInputValue]);
+
   return (
     <div className={classes.mainBackgroundColor}>
-      <NavBar />
-      <CarouselSlider movies={movies} />
+      <NavBar onInputChange={handleInputValueChange} />
+      <CarouselSlider movies={allMovies} />
       <div className={classes.titleContainer}>
         <p className={classes.title}>Películas más vistas</p>
       </div>
       <div className={classes.posterContainer}>
-        {movies.map((movie, index) => {
-          return <Movie key={`movie-${index}`} {...movie} />;
-        })}
+        {filteredMovies.map((movie, index) => (
+          <Movie key={`movie-${index}`} {...movie} />
+        ))}
       </div>
       <Stack spacing={2}>
         <Pagination

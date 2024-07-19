@@ -44,7 +44,7 @@ const RestablecerContraseña = () => {
           validationSchema={validationSchema}
           onSubmit={(values) => {
             // Aquí manejas la lógica para enviar los datos del formulario
-            console.log(values);
+            // console.log(values);
           }}
         >
           {({

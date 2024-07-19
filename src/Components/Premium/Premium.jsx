@@ -59,7 +59,7 @@ const Premium = () => {
             initialValues={{ email: "", password: "" }}
             onSubmit={(values) => {
               // Aquí manejas la lógica para enviar los datos del formulario
-              console.log(values);
+              // console.log(values);
             }}
           >
             {({ handleSubmit, isSubmitting, errors, touched }) => (

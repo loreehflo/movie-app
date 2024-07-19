@@ -27,7 +27,7 @@ const MovieCard = (props) => {
     navigate("/ver-pelicula", {
       state: {
         propsBackdrop: props.backdrop_path,
-        propsTitulo: props.original_title,
+        propsTitulo: props.title,
       },
     });
   };
@@ -36,7 +36,7 @@ const MovieCard = (props) => {
     navigate("/resumen-pelicula", {
       state: {
         propsBackdrop: props.backdrop_path,
-        propsTitulo: props.original_title,
+        propsTitulo: props.title,
         propsOverView: props.overview,
       },
     });
@@ -63,7 +63,7 @@ const MovieCard = (props) => {
       </CardActions>
       <CardContent className={classes.backgroundCard}>
         <Typography variant="body1" color="text.primary">
-          {`${props.original_title}`}
+          {`${props.title}`}
         </Typography>
         <Typography variant="body2" color="text.secondary">
           {releaseYear}
