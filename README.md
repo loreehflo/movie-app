@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/loreehflo/to-do-list).
+This project was bootstrapped with [Create React App](https://github.com/loreehflo/movie-app).
 
 ## Clone Repository
 
